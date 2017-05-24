@@ -12,4 +12,8 @@ class HomeController < ApplicationController
 
   end
 
+  def artist_profile
+
+  end
+
 end

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get 'artist', to: 'home#artist'
   get 'instatoons', to: 'home#instatoons'
+  get 'artist-profile', to: 'home#artist_profile'
 end
