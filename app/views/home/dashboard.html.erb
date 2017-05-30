@@ -1,5 +1,5 @@
-<%= render 'layouts/header' %>
 <div class="container" style="margin-top: 80px">
+  <%= render 'layouts/alerts' %>
   <div class="text-center">
     <h2>Dashboard</h2>
   </div>
@@ -7,7 +7,7 @@
     <%= link_to 'Nuevo Artista', new_artist_path, class: "btn btn-success btn-lg" %>
     <br><br>
     <% @artists.each do |artist| %>
-      <div class="media">
+      <div class="media" style="margin-bottom: 80px">
         <span class="media-left">
             <img src="<%= artist.image %>" alt="..." class="img-circle">
         </span>
@@ -26,6 +26,9 @@
         <%= link_to edit_artist_path(artist) do %>
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         <% end %>
+        <%= link_to artist, method: :delete, data: { confirm: 'Estás seguro de eliminar este artista?' } do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
       </div>
     <% end %>
 	</div>
@@ -33,4 +36,3 @@
     <%= link_to 'Nuevo Toon', new_toon_path, class: "btn btn-success btn-lg" %>
 	</div>
 </div>
-<%= render 'layouts/footer' %>

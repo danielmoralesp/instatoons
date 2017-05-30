@@ -30,8 +30,16 @@ class ArtistsController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:alert] = 'Algo fallo, el artista no ha sido actualizado con éxito'
-      render :edit
+      render :new
     end
+  end
+
+  def destroy
+    @artist = Artist.find(params[:id])
+
+    @artist.destroy
+    flash[:notice] = 'El artista ha sido eliminado'
+    redirect_to dashboard_path
   end
 
   private
