@@ -20,4 +20,8 @@ class HomeController < ApplicationController
 
   end
 
+  def dashboard
+    @artists = Artist.all
+  end
+
 end

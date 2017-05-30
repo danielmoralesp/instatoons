@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519044540) do
+ActiveRecord::Schema.define(version: 20170530004906) do
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "toons", force: :cascade do |t|
+    t.integer  "artist_id"
+    t.string   "title"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_toons_on_artist_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

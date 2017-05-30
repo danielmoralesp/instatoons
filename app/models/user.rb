@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
 
   enum role: [ :visitor, :admin ]
+
+  before_create :set_default_role
+
+  def set_default_role
+    self.role = :visitor
+  end
 end

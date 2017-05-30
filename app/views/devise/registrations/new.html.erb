@@ -7,11 +7,6 @@
         <%= devise_error_messages! %>
 
         <div class="field form-group">
-          <%= f.label 'Rol' %><br />
-          <%= f.select :role, User.roles.keys.map {|key| [key.humanize != 'Admin' ? key.humanize : {:disabled => true}, key]}, {}, {autofocus: true, class: 'form-control'}  %>
-        </div>
-
-        <div class="field form-group">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, class: 'form-control' %>
         </div>

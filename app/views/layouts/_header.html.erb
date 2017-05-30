@@ -18,6 +18,9 @@
         <li class="<%= active_class(instatoons_path) %>"><%= link_to 'Instatoons', instatoons_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? && current_user.admin? %>
+          <li class="<%= active_class(dashboard_path) %>"><%= link_to 'Dashboard', dashboard_path %></li>
+        <% end %>
         <% if user_signed_in? %>
           <li><a >Bienvenido, <%= current_user.email %></a></li>
           <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
