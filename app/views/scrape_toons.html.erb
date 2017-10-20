@@ -26,21 +26,17 @@
   <div class="text-center">
     <h2>Instatoons</h2>
   </div>
-  <div class="col-md-6">
-    <div class="panel panel-default panelD">
-      <div class="panel-image">
-        <%= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
+  <% @images.each do |image| %>
+    <div class="col-md-6">
+      <div class="panel panel-default panelD">
+        <div class="panel-image">
+          <%= image_tag "#{image.split('/').last}", class: "panel-image-preview" %>
+          <%#= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
+        </div>
       </div>
-    </div>
-	</div>
-  <div class="col-md-6">
-    <div class="panel panel-default panelD">
-      <div class="panel-image">
-        <%= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
-      </div>
-    </div>
-	</div>
+  	</div>
 
+  <% end %>
 </div>
 
 <hr>

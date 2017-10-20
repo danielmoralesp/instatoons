@@ -44,6 +44,8 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    @images = Dir.glob("app/assets/images/*.jpeg")
+
     # We'll just try to render the array and see what happens
     render template: 'scrape_toons'
   end
