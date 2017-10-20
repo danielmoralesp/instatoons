@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
 
   # Define the Toon object
   class Toon
-    def initialize(title, link, img_url)
+    def initialize(title, author, img_url)
       @title = title
-      @link = link
+      @author = author
       @img_url = img_url
     end
     attr_reader :title
-    attr_reader :link
+    attr_reader :author
     attr_reader :img_url
   end
 
@@ -29,9 +29,10 @@ class ApplicationController < ActionController::Base
     @toonsArray = []
     toons.each do |toon|
       title = toon.css('h3>a').text
-      link = toon.css('a')[0]['href']
+      #author = toon.css('a')[0]['href']
+      author = toon.css('.author-name').text
       img_url = toon.css('a>img').attr('src')
-      @toonsArray << Toon.new(title, link, img_url)
+      @toonsArray << Toon.new(title, author, img_url)
 
       # download image code
       path = File.join Rails.root, 'app', 'assets', 'images', "#{title}.jpeg"

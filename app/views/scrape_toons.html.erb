@@ -8,28 +8,15 @@
       <hr>
       <% @toonsArray.each do |toon| %>
         <div class="panel panel-default panelD">
-            <div class="panel-heading">
-              <ul class="list-inline">
-                  <li><%= toon.title %></li>
-                  <li class="pull-right" style="padding-right: 0;">1 week</li>
-              </ul>
-            </div>
-            <div class="panel-image">
-              <img src="<%= @img_url_2 %>" class="panel-image-preview" />
-            </div>
-            <div class="panel-body">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              </blockquote>
-              <span class="tagz">Tags: <a>#faking</a></span>
-            </div>
-            <div class="panel-footer">
-              <ul class="list-inline clearfix">
-                <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><a href=""><span class="fa fa-thumbs-o-up"></span> Like</a><span>10</span></li>
-                <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><center><a href=""><span class="fa fa-comments"></span> </a><span>10</span></center></li>
-                <li class="col-sm-4 col-md-4 col-lg-4" style="padding-right: 0;"><span class="pull-right">10</span><a class="pull-right" href=""><span class="fa fa-bomb"></span> Nutty</a></li>
-              </ul>
-            </div>
+          <div class="panel-heading">
+            <ul class="list-inline">
+                <li><%= toon.title %></li>
+                <li class="pull-right" style="padding-right: 0;"><%= toon.author %></li>
+            </ul>
+          </div>
+          <div class="panel-image">
+            <img src="<%= @img_url_2 %>" class="panel-image-preview" />
+          </div>
         </div>
       <% end %>
     </div>
@@ -41,56 +28,19 @@
   </div>
   <div class="col-md-6">
     <div class="panel panel-default panelD">
-        <div class="panel-heading">
-          <ul class="list-inline">
-              <li>Fred</li>
-              <li class="pull-right" style="padding-right: 0;">1 week</li>
-          </ul>
-        </div>
-        <div class="panel-image">
-          <%= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
-        </div>
-        <div class="panel-body">
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          </blockquote>
-          <span class="tagz">Tags: <a>#faking</a></span>
-        </div>
-        <div class="panel-footer">
-          <ul class="list-inline clearfix">
-            <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><a href=""><span class="fa fa-thumbs-o-up"></span> Like</a><span>10</span></li>
-            <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><center><a href=""><span class="fa fa-comments"></span> </a><span>10</span></center></li>
-            <li class="col-sm-4 col-md-4 col-lg-4" style="padding-right: 0;"><span class="pull-right">10</span><a class="pull-right" href=""><span class="fa fa-bomb"></span> Nutty</a></li>
-          </ul>
-        </div>
+      <div class="panel-image">
+        <%= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
+      </div>
     </div>
 	</div>
   <div class="col-md-6">
     <div class="panel panel-default panelD">
-        <div class="panel-heading">
-          <ul class="list-inline">
-              <li>Fred</li>
-              <li class="pull-right" style="padding-right: 0;">1 week</li>
-          </ul>
-        </div>
-        <div class="panel-image">
-          <img src="/assets/payaso.jpg" class="panel-image-preview" />
-        </div>
-        <div class="panel-body">
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          </blockquote>
-          <span class="tagz">Tags: <a>#faking</a></span>
-        </div>
-        <div class="panel-footer">
-          <ul class="list-inline clearfix">
-            <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><a href=""><span class="fa fa-thumbs-o-up"></span> Like</a><span>10</span></li>
-            <li class="col-sm-4 col-md-4 col-lg-4 level-line-up"><center><a href=""><span class="fa fa-comments"></span> </a><span>10</span></center></li>
-            <li class="col-sm-4 col-md-4 col-lg-4" style="padding-right: 0;"><span class="pull-right">10</span><a class="pull-right" href=""><span class="fa fa-bomb"></span> Nutty</a></li>
-          </ul>
-        </div>
+      <div class="panel-image">
+        <%= image_tag 'El lanzamiento de Vargas Lleras.jpeg', class: "panel-image-preview" %>
+      </div>
     </div>
 	</div>
+
 </div>
 
 <hr>
